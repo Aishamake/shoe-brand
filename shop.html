@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium handcrafted shoes at SoleCraft.">
+  <title>Shop Shoes | SOLECRAFT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        SOLE<span>CRAFT.</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation"
+              aria-controls="mainNav"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="custom-order.html">Custom Orders</a>
+        <a href="cart.html" class="cart-nav-link">Cart (<span class="cart-count">0</span>)</a>
+        <a href="contact.html" class="nav-cta">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SHOP HERO -->
+    <section class="shop-hero">
+      <div class="container">
+        <span class="eyebrow">THE SOLECRAFT COLLECTION</span>
+        <h1>Find Your Perfect Pair</h1>
+        <p>
+          Discover beautifully crafted footwear designed
+          for comfort, confidence and timeless style.
+        </p>
+      </div>
+    </section>
+
+    <!-- SHOP PRODUCTS -->
+    <section class="shop-page section" id="shop">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR COLLECTION</span>
+          <h2>Shop Our Footwear</h2>
+          <p>Choose your style from our exclusive collection.</p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="shop-filter" aria-label="Filter shoes">
+          <button class="shop-filter-btn active"
+                  data-filter="all">All Shoes</button>
+          <button class="shop-filter-btn"
+                  data-filter="men">Men</button>
+          <button class="shop-filter-btn"
+                  data-filter="women">Women</button>
+          <button class="shop-filter-btn"
+                  data-filter="sandals">Sandals</button>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="shop-search">
+          <label for="shoeSearch">Search our collection</label>
+          <input type="search" id="shoeSearch"
+                 placeholder="Search for shoes...">
+          <p id="shoeCount" aria-live="polite"></p>
+        </div>
+
+        <!-- ALL PRODUCT CARDS -->
+        <div class="shoe-grid" id="shoeGrid">
+
+          <!-- ========== MEN ========== -->
+
+          <!-- MEN SHOE 1 -->
+          <article class="shoe-card" data-category="men">
+            <div class="shoe-image">
+              <img src="assets/images/men-1.jpg"
+                   alt="Classic Leather Oxford"
+                   loading="lazy">
+              <span class="shoe-label">Men</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Classic Leather Oxford</h3>
+              <p class="shoe-price">₦45,000</p>
+              <button class="shoe-order"
+                      data-product="Classic Leather Oxford">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- MEN SHOE 2 -->
+          <article class="shoe-card" data-category="men">
+            <div class="shoe-image">
+              <img src="assets/images/men-2.jpg"
+                   alt="Executive Leather Loafers"
+                   loading="lazy">
+              <span class="shoe-label">Men</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Executive Leather Loafers</h3>
+              <p class="shoe-price">₦55,000</p>
+              <button class="shoe-order"
+                      data-product="Executive Leather Loafers">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- MEN SHOE 3 -->
+          <article class="shoe-card" data-category="men">
+            <div class="shoe-image">
+              <img src="assets/images/men-3.jpg"
+                   alt="Premium Casual Sneakers"
+                   loading="lazy">
+              <span class="shoe-label">Men</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Premium Casual Sneakers</h3>
+              <p class="shoe-price">₦42,000</p>
+              <button class="shoe-order"
+                      data-product="Premium Casual Sneakers">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- ========== WOMEN ========== -->
+
+          <!-- WOMEN SHOE 1 -->
+          <article class="shoe-card" data-category="women">
+            <div class="shoe-image">
+              <img src="assets/images/women-1.jpg"
+                   alt="Elegant Women's Heels"
+                   loading="lazy">
+              <span class="shoe-label">Women</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Elegant Women's Heels</h3>
+              <p class="shoe-price">₦38,000</p>
+              <button class="shoe-order"
+                      data-product="Elegant Women's Heels">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- WOMEN SHOE 2 -->
+          <article class="shoe-card" data-category="women">
+            <div class="shoe-image">
+              <img src="assets/images/women-2.jpg"
+                   alt="Ladies Fashion Sneakers"
+                   loading="lazy">
+              <span class="shoe-label">Women</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Ladies Fashion Sneakers</h3>
+              <p class="shoe-price">₦35,000</p>
+              <button class="shoe-order"
+                      data-product="Ladies Fashion Sneakers">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- WOMEN SHOE 3 -->
+          <article class="shoe-card" data-category="women">
+            <div class="shoe-image">
+              <img src="assets/images/women-3.jpg"
+                   alt="Classic Ladies Flats"
+                   loading="lazy">
+              <span class="shoe-label">Women</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Classic Ladies Flats</h3>
+              <p class="shoe-price">₦28,000</p>
+              <button class="shoe-order"
+                      data-product="Classic Ladies Flats">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- ========== SANDALS ========== -->
+
+          <!-- SANDAL 1 -->
+          <article class="shoe-card" data-category="sandals">
+            <div class="shoe-image">
+              <img src="assets/images/sandal-1.jpg"
+                   alt="Premium Leather Sandals"
+                   loading="lazy">
+              <span class="shoe-label">Sandals</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Premium Leather Sandals</h3>
+              <p class="shoe-price">₦25,000</p>
+              <button class="shoe-order"
+                      data-product="Premium Leather Sandals">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- SANDAL 2 -->
+          <article class="shoe-card" data-category="sandals">
+            <div class="shoe-image">
+              <img src="assets/images/sandal-2.jpg"
+                   alt="Everyday Comfort Sandals"
+                   loading="lazy">
+              <span class="shoe-label">Sandals</span>
+            </div>
+            <div class="shoe-details">
+              <h3>Everyday Comfort Sandals</h3>
+              <p class="shoe-price">₦22,000</p>
+              <button class="shoe-order"
+                      data-product="Everyday Comfort Sandals">
+                Order Now
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="shop-empty" id="shopEmpty" hidden>
+          No shoes found. Try another search or category.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CUSTOM ORDER -->
+    <section class="custom-section">
+      <div class="container custom-content">
+        <span class="eyebrow">CUSTOM MADE FOR YOU</span>
+        <h2>Need Something Unique?</h2>
+        <p>
+          Let SoleCraft create a pair that perfectly
+          matches your style and personality.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">
+          Request Custom Shoes
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo">
+          SOLE<span>CRAFT.</span>
+        </a>
+        <p>Handcrafted footwear. Timeless confidence.</p>
+      </div>
+      <p>© <span id="year"></span> SoleCraft. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

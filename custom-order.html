@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request custom handmade footwear from SoleCraft.">
+  <title>Custom Shoe Orders | SOLECRAFT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+
+      <a href="index.html" class="logo">
+        SOLE<span>CRAFT.</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation"
+              aria-controls="mainNav"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="shop.html">Shop</a>
+        <a href="custom-order.html" aria-current="page">
+          Custom Orders
+        </a>
+        <a href="cart.html">
+          Cart (<span class="cart-count">0</span>)
+        </a>
+        <a href="contact.html" class="nav-cta">
+          Contact Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CUSTOM ORDER HERO -->
+    <section class="custom-order-hero">
+      <div class="container">
+        <span class="eyebrow">MADE EXCLUSIVELY FOR YOU</span>
+        <h1>Design Your Perfect Pair</h1>
+        <p>
+          Your vision. Our craftsmanship. Create footwear
+          that reflects your personality and unique style.
+        </p>
+        <a href="#customOrderForm" class="btn btn-primary">
+          Start Your Custom Order
+        </a>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section custom-intro">
+      <div class="container custom-intro-grid">
+
+        <div class="custom-intro-image">
+          <img src="assets/images/hero-section-1.jpg"
+               alt="Custom handcrafted shoe"
+               loading="lazy">
+        </div>
+
+        <div class="custom-intro-text">
+          <span class="eyebrow">PERSONALIZED CRAFTSMANSHIP</span>
+          <h2>Every Great Shoe Starts With Your Idea</h2>
+          <p>
+            At SoleCraft, we bring your footwear ideas to life.
+            From elegant formal shoes to comfortable everyday
+            sandals, we craft shoes designed around your needs.
+          </p>
+          <p>
+            Tell us your preferred style, size, color and
+            material. Our team will review your request and
+            discuss the next steps with you.
+          </p>
+
+          <div class="custom-feature">
+            <strong>01. Choose Your Style</strong>
+            <p>Select the type of shoe you want.</p>
+          </div>
+
+          <div class="custom-feature">
+            <strong>02. Personalize Your Design</strong>
+            <p>Choose your size, color and material.</p>
+          </div>
+
+          <div class="custom-feature">
+            <strong>03. Submit Your Request</strong>
+            <p>Send your design details through WhatsApp.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CUSTOM ORDER FORM -->
+    <section class="section custom-form-section" id="customOrderForm">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">CREATE YOUR OWN STYLE</span>
+          <h2>Custom Shoe Request</h2>
+          <p>
+            Complete the form below to tell us exactly
+            what you would like us to create.
+          </p>
+        </div>
+
+        <form id="solecraftCustomForm" class="custom-order-form">
+
+          <fieldset class="custom-form-group">
+            <legend>01. Shoe Details</legend>
+
+            <div class="custom-fields-grid">
+
+              <div class="custom-field">
+                <label for="customShoeType">Shoe Type *</label>
+                <select id="customShoeType" required>
+                  <option value="">Select shoe type</option>
+                  <option>Oxford Shoes</option>
+                  <option>Loafers</option>
+                  <option>Sneakers</option>
+                  <option>Heels</option>
+                  <option>Sandals</option>
+                  <option>Boots</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="custom-field">
+                <label for="customShoeSize">Shoe Size (EU) *</label>
+                <select id="customShoeSize" required>
+                  <option value="">Select shoe size</option>
+                  <option>35</option>
+                  <option>36</option>
+                  <option>37</option>
+                  <option>38</option>
+                  <option>39</option>
+                  <option>40</option>
+                  <option>41</option>
+                  <option>42</option>
+                  <option>43</option>
+                  <option>44</option>
+                  <option>45</option>
+                  <option>46</option>
+                  <option>47</option>
+                  <option>48</option>
+                </select>
+              </div>
+
+              <div class="custom-field">
+                <label for="customColor">Preferred Color *</label>
+                <input type="text" id="customColor"
+                       placeholder="e.g. Black, Brown, Navy Blue"
+                       required>
+              </div>
+
+              <div class="custom-field">
+                <label for="customMaterial">Preferred Material *</label>
+                <select id="customMaterial" required>
+                  <option value="">Select material</option>
+                  <option>Genuine Leather</option>
+                  <option>Suede</option>
+                  <option>Synthetic Leather</option>
+                  <option>Canvas</option>
+                  <option>Fabric</option>
+                  <option>Not Sure - Recommend for Me</option>
+                </select>
+              </div>
+
+              <div class="custom-field">
+                <label for="customQuantity">Quantity *</label>
+                <input type="number" id="customQuantity"
+                       min="1" max="100" value="1" required>
+              </div>
+
+              <div class="custom-field">
+                <label for="customBudget">Estimated Budget</label>
+                <select id="customBudget">
+                  <option value="">Select budget (optional)</option>
+                  <option>Below ₦20,000</option>
+                  <option>₦20,000 - ₦40,000</option>
+                  <option>₦40,000 - ₦60,000</option>
+                  <option>₦60,000 - ₦100,000</option>
+                  <option>Above ₦100,000</option>
+                  <option>Open to Quotation</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="custom-field">
+              <label for="customDescription">
+                Describe Your Preferred Design *
+              </label>
+              <textarea id="customDescription" rows="5"
+                        placeholder="Tell us about the shoe design, stitching, sole, finishing or any special details..."
+                        required></textarea>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="custom-form-group">
+            <legend>02. Design Reference</legend>
+
+            <div class="custom-upload">
+              <label for="customImage">Upload Reference Image (Optional)</label>
+              <input type="file" id="customImage"
+                     accept="image/png,image/jpeg,image/webp">
+
+              <p>
+                JPG, PNG or WebP. Maximum 5 MB.
+                You'll attach this picture separately in WhatsApp.
+              </p>
+
+              <div class="custom-image-preview" id="customImagePreview"
+                   hidden>
+                <img id="customPreviewImg" alt="Selected shoe design preview">
+                <button type="button" id="removeCustomImage">
+                  Remove Image
+                </button>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="custom-form-group">
+            <legend>03. Customer Information</legend>
+
+            <div class="custom-fields-grid">
+
+              <div class="custom-field">
+                <label for="customName">Full Name *</label>
+                <input type="text" id="customName"
+                       autocomplete="name"
+                       placeholder="Your full name" required>
+              </div>
+
+              <div class="custom-field">
+                <label for="customPhone">Phone Number *</label>
+                <input type="tel" id="customPhone"
+                       autocomplete="tel"
+                       placeholder="08012345678" required>
+              </div>
+
+              <div class="custom-field">
+                <label for="customEmail">Email Address</label>
+                <input type="email" id="customEmail"
+                       autocomplete="email"
+                       placeholder="you@example.com">
+              </div>
+
+              <div class="custom-field">
+                <label for="customDate">Preferred Delivery Date</label>
+                <input type="date" id="customDate">
+              </div>
+
+            </div>
+
+            <div class="custom-field">
+              <label for="customAddress">Delivery Location *</label>
+              <textarea id="customAddress" rows="3"
+                        placeholder="Your city, state and delivery address"
+                        required></textarea>
+            </div>
+
+          </fieldset>
+
+          <div class="custom-submit-area">
+            <p>
+              By submitting, you will be redirected to WhatsApp
+              to send your request. No payment is collected here.
+            </p>
+
+            <button type="submit" class="btn btn-primary">
+              Submit Custom Order via WhatsApp
+            </button>
+
+            <p id="customFormMessage" role="status"
+               aria-live="polite"></p>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo">
+          SOLE<span>CRAFT.</span>
+        </a>
+        <p>Handcrafted footwear. Timeless confidence.</p>
+      </div>
+      <p>© <span id="year"></span> SoleCraft. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

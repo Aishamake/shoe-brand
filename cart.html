@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your SoleCraft shopping cart and place your order.">
+  <title>Shopping Cart | SOLECRAFT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+
+      <a href="index.html" class="logo">
+        SOLE<span>CRAFT.</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation"
+              aria-controls="mainNav"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#custom">Custom Orders</a>
+        <a href="cart.html" class="cart-nav-link" aria-current="page">
+          Cart (<span class="cart-count">0</span>)
+        </a>
+        <a href="index.html#contact" class="nav-cta">
+          Contact Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CART BANNER -->
+    <section class="cart-banner">
+      <div class="container">
+        <span class="eyebrow">YOUR SOLECRAFT ORDER</span>
+        <h1>Shopping Cart</h1>
+        <p>Review your selected shoes before placing your order.</p>
+      </div>
+    </section>
+
+    <!-- CART CONTENT -->
+    <section class="cart-section">
+      <div class="container">
+
+        <div class="cart-layout">
+
+          <!-- LEFT: CART PRODUCTS -->
+          <div class="cart-products-area">
+
+            <div class="cart-section-title">
+              <h2>Your Items</h2>
+              <span id="cartItemCount">0 items</span>
+            </div>
+
+            <div id="cartItems" aria-live="polite"></div>
+
+            <div id="emptyCart" class="empty-cart" hidden>
+              <div class="empty-cart-icon" aria-hidden="true">🛍️</div>
+              <h3>Your cart is empty</h3>
+              <p>
+                Discover our handcrafted footwear and
+                add your favorite shoes to your cart.
+              </p>
+              <a href="shop.html" class="btn btn-dark">
+                Continue Shopping
+              </a>
+            </div>
+
+            <a href="shop.html" class="continue-shopping"
+               id="continueShopping">
+              ← Continue Shopping
+            </a>
+
+          </div>
+
+          <!-- RIGHT: ORDER SUMMARY -->
+          <aside class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="cartSubtotal">₦0</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span>To be confirmed</span>
+            </div>
+
+            <div class="summary-total">
+              <span>Products Total</span>
+              <strong id="cartTotal">₦0</strong>
+            </div>
+
+            <p class="summary-note">
+              Delivery fees and product availability will
+              be confirmed before payment.
+            </p>
+
+            <h3>Customer Information</h3>
+
+            <form id="checkoutForm">
+
+              <div class="checkout-field">
+                <label for="customerName">Full Name *</label>
+                <input type="text"
+                       id="customerName"
+                       name="customerName"
+                       placeholder="Enter your full name"
+                       autocomplete="name"
+                       required>
+              </div>
+
+              <div class="checkout-field">
+                <label for="customerPhone">Phone Number *</label>
+                <input type="tel"
+                       id="customerPhone"
+                       name="customerPhone"
+                       placeholder="e.g. 08012345678"
+                       autocomplete="tel"
+                       required>
+              </div>
+
+              <div class="checkout-field">
+                <label for="customerAddress">Delivery Address *</label>
+                <textarea id="customerAddress"
+                          name="customerAddress"
+                          rows="3"
+                          placeholder="Enter your delivery address"
+                          autocomplete="street-address"
+                          required></textarea>
+              </div>
+
+              <div class="checkout-field">
+                <label for="orderNotes">Additional Notes</label>
+                <textarea id="orderNotes"
+                          name="orderNotes"
+                          rows="3"
+                          placeholder="Special requests (optional)"></textarea>
+              </div>
+
+              <button type="submit"
+                      class="btn btn-primary checkout-btn"
+                      id="checkoutButton">
+                Place Order via WhatsApp
+              </button>
+
+              <p id="checkoutMessage" class="checkout-message"
+                 role="status"></p>
+
+            </form>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <a href="index.html" class="logo">
+          SOLE<span>CRAFT.</span>
+        </a>
+        <p>Handcrafted footwear. Timeless confidence.</p>
+      </div>
+      <p>© <span id="year"></span> SoleCraft. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
